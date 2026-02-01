@@ -3,10 +3,12 @@ version: "3.8"
 services:
   web:
     build: .
-    container_name: apache_server
     ports:
       - "80:80"
-      - "443:443"
     volumes:
-      - ./html:/var/www/html
+      - apache_data:/var/www/html
+
+volumes:
+  apache_data:
+
 
