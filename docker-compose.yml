@@ -6,9 +6,4 @@ services:
     ports:
       - "80:80"
     volumes:
-      - apache_data:/var/www/html
-
-volumes:
-  apache_data:
-
-
+      - ./html/index.html:/var/www/html/index.html
